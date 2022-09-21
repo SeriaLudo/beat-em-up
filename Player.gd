@@ -37,6 +37,7 @@ func _physics_process(delta):
 		$AnimationPlayer.play("Run")
 	else:
 		motion.x = lerp(motion.x, 0, 0.2)
+		$AnimationPlayer.play("Idle")
 	
 	if is_on_floor():	
 		if Input.is_action_just_pressed("jump"):
