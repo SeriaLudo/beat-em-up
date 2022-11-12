@@ -35,6 +35,8 @@ func _physics_process(delta):
 		motion.x -= ACCEL
 		facing_right = false
 		$AnimationPlayer.play("Run")
+	elif Input.is_action_pressed("hit"):
+		$AnimationPlayer.play("Hit")
 	else:
 		motion.x = lerp(motion.x, 0, 0.2)
 		$AnimationPlayer.play("Idle")
